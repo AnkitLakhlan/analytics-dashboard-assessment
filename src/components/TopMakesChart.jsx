@@ -12,8 +12,6 @@ import {
 import "../CSS/Charts.css";
 
 const TopMakesChart = ({ data }) => {
-  const maxValue = Math.max(...data.map((d) => d.count));
-
   return (
     <div className="chart_container">
       <h3 className="chart_title">Top 10 Manufacturers</h3>
