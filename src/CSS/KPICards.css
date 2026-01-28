@@ -1,0 +1,98 @@
+.kpi_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.kpi_container .kpi_card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi_container .kpi_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+}
+
+.kpi_container .kpi_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.kpi_container .kpi_card:nth-child(1)::before {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.kpi_container .kpi_card:nth-child(2)::before {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.kpi_container .kpi_card:nth-child(3)::before {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.kpi_container .kpi_card:nth-child(4)::before {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+
+.kpi_container .kpi_card .kpi_value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+
+.kpi_container .kpi_card:nth-child(2) .kpi_value {
+  background: linear-gradient(135deg, #047857, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.kpi_container .kpi_card:nth-child(3) .kpi_value {
+  background: linear-gradient(135deg, #b45309, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.kpi_container .kpi_card:nth-child(4) .kpi_value {
+  background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.kpi_container .kpi_card .kpi_label {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .kpi_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpi_container .kpi_card .kpi_value {
+    font-size: 1.8rem;
+  }
+}
