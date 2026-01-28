@@ -2,8 +2,7 @@
 
 ## Live Dashboard
 
-**[View Live Dashboard](https://your-vercel-url.vercel.app)**
-*(Update this URL after deployment)*
+**[View Live Dashboard](https://analytics-dashboard-assessment-five-liart.vercel.app/)**
 
 ---
 
